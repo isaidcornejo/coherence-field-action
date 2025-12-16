@@ -1,0 +1,60 @@
+The Fisher--Rao metric endows parametric statistical models with a canonical Riemannian
+structure, encoding infinitesimal statistical distinguishability between nearby parameter
+values \cite{Fisher1922,Rao1945,AmariNagaoka2000,Amari2016}. This intrinsic geometry
+underlies asymptotic inference, natural-gradient methods \cite{Martens2020}, and modern
+geometric formulations of learning and optimization \cite{Bronstein2021}.
+
+Throughout this work, the statistical manifold is denoted by $\ThetaMan$, with local
+coordinates $\theta \in \ThetaMan$ and dimension $D = \dim(\ThetaMan)$. While some
+treatments distinguish between a parameter space and an abstract manifold, we adopt the
+notation $\ThetaMan$ to emphasize the dual role of model parameters as coordinates on an
+intrinsic information-geometric manifold endowed with a unique, reparametrization-invariant
+metric structure.
+
+In idealized settings where the data-generating distribution coincides with the assumed
+model family, the Fisher--Rao metric fully characterizes local statistical sensitivity. In
+empirical practice, however, the observed data distribution $q(x)$ generically deviates
+from the assumed model $p(x \mid \theta)$. This mismatch induces anisotropic empirical
+score covariances, dominant sensitivity directions, and effective dimensional reduction in
+parameter space, phenomena that are well documented in modern statistical models and
+learning systems \cite{Martens2020,Bronstein2021}. From an information-geometric
+perspective, these effects correspond to a deformation of the intrinsic Fisher geometry
+induced by empirical data.
+
+Specifically, the empirical score covariance
+\begin{equation}
+\Cov_{ij}(\theta;q)
+=
+\mathbb{E}_{q}\!\left[
+\partial_i \log p(x\mid\theta)\,
+\partial_j \log p(x\mid\theta)
+\right]
+\end{equation}
+does not, in general, coincide with the Fisher--Rao metric
+\begin{equation}
+\Metric_{ij}(\theta)
+=
+\mathbb{E}_{p(\cdot\mid\theta)}\!\left[
+\partial_i \log p(x\mid\theta)\,
+\partial_j \log p(x\mid\theta)
+\right].
+\end{equation}
+
+Here $q(x)$ may denote either the true data-generating distribution or the empirical
+measure induced by finite samples. Since only products of first-order score functions
+appear, the empirical covariance remains well defined even when $q$ is atomic
+\cite{AmariNagaoka2000,Amari2016}.
+
+The discrepancy between $\Cov_{ij}$ and $\Metric_{ij}$ encodes how empirical data
+selectively reinforce or suppress sensitivity directions relative to the model’s intrinsic
+information geometry. Quantifying this deformation invariantly, and constructing a
+principled mechanism to relax and geometrically smooth its empirical manifestations across
+parameter space, constitute the central motivation of the present work.
+
+The present work should be read as a geometric completion of the scalar diagnostic
+introduced in Ref.~\cite{CornejoAlignment2025}. While the diagnostic $A(\theta;q)$ provides
+a pointwise, reparametrization-invariant measure of empirical deformation, it does not
+define a global or variational structure. Here we promote this diagnostic to a source for an
+intrinsic geometric variational theory, yielding a globally consistent and Fisher--Rao--aware
+regularization mechanism. The \LaTeX{} source of the manuscript and all figures are
+publicly available at \url{https://github.com/isaidcornejo/coherence-field-action}.

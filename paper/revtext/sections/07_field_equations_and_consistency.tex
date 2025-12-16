@@ -1,0 +1,56 @@
+\subsection{Field equation}
+
+Variation of the action~\eqref{eq:ActionPoisson} with respect to $\phi$ yields the
+Euler--Lagrange equation
+\begin{equation}
+\boxed{
+-\Delta_{G}\phi(\theta)
+=
+-\gamma\,A(\theta;q).
+}
+\label{eq:PoissonEquation}
+\end{equation}
+
+This equation is a Poisson equation on the Fisher--Rao manifold $(\ThetaMan,G)$,
+with the empirical diagnostic acting as a geometric source.
+Its structure is completely fixed by the Fisher geometry and the variational principle.
+
+\subsection{Global consistency and zero-mode structure}
+
+On compact statistical manifolds, the Laplace--Beltrami operator admits a constant
+zero mode. As a direct consequence, Eq.~\eqref{eq:PoissonEquation} admits solutions
+if and only if the empirical source satisfies the global consistency condition
+\begin{equation}
+\int_{\ThetaMan} \mathrm{d}^D\theta\,\sqrt{\det G}\,A(\theta;q) = 0.
+\label{eq:zeromode}
+\end{equation}
+
+This condition is not an additional assumption but a structural consequence of the
+Laplace--Beltrami operator on compact manifolds. Geometrically, it reflects the fact
+that only the spatially varying component of empirical deformation can be relaxed
+by Fisher--geometric smoothing. A uniform isotropic offset corresponds to a global
+shift that cannot be resolved locally and must therefore be fixed by convention.
+
+On non-compact statistical manifolds, the constraint~\eqref{eq:zeromode} is replaced
+by appropriate decay conditions at large Fisher--Rao distance, which ensure both
+existence and uniqueness of solutions as well as finiteness of the energy functional.
+In practice, statistical manifolds of interest—such as exponential-family models
+with open parameter domains—admit natural decay conditions inherited from the Fisher
+volume measure.
+
+In the univariate Gaussian example discussed in Sec.~\ref{sec:example}, the Poincaré
+half-plane geometry guarantees sufficient decay of admissible solutions at infinity,
+thereby ensuring a well-posed Poisson problem without the need for additional
+infrared regularization.
+
+\subsection{Gauge fixing and normalization}
+
+The existence of a zero mode implies a gauge freedom under constant shifts
+$\phi \mapsto \phi + \mathrm{const}$.
+This freedom may be fixed by imposing a normalization condition, such as
+\begin{equation}
+\int_{\ThetaMan} \mathrm{d}^D\theta\,\sqrt{\det G}\,\phi(\theta) = 0.
+\end{equation}
+
+This choice fixes the reference level of the alignment field without affecting any
+observable geometric gradients or relative structure.

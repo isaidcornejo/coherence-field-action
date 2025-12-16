@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+
+message: >
+  If you use this work, please cite the concept DOI, which always resolves
+  to the latest version of the document.
+
+title: "A Fisher–Geometric Action for the Isotropic Empirical Alignment Field"
+
+date-released: "2025-12-15"
+
+authors:
+  - family-names: "Cornejo"
+    given-names: "Isaid"
+    affiliation: "Information Physics Institute"
+
+repository-code: "https://github.com/isaidcornejo/coherence-action"
+
+# Concept DOI — permanent identifier resolving to all versions
+doi: "10.5281/zenodo.17945870"
+
+# Version-specific identifiers (optional but recommended)
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.17945870"
+    description: "Version 1 (initial release)"
+
+preferred-citation:
+  type: generic
+  title: "A Fisher–Geometric Action for the Isotropic Empirical Alignment Field"
+  authors:
+    - family-names: "Cornejo"
+      given-names: "Isaid"
+      affiliation: "Information Physics Institute"
+  year: 2025
+  doi: "10.5281/zenodo.17945870"
+  url: "https://doi.org/10.5281/zenodo.17945870"

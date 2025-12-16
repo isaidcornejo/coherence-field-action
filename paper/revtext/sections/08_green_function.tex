@@ -1,0 +1,29 @@
+Formally, solutions of Eq.~\eqref{eq:PoissonEquation} may be expressed in terms of the
+Green function $\mathcal{G}(\theta,\theta')$ of the Laplace--Beltrami operator
+\cite{Rosenberg1997},
+\begin{equation}
+-\Delta_G\,\mathcal{G}(\theta,\theta')
+=
+\frac{1}{\sqrt{\det G}}\delta(\theta-\theta'),
+\end{equation}
+subject to the chosen boundary or normalization conditions.
+
+Here $\mathcal{G}(\theta,\theta')$ denotes the Green function of the
+Laplace--Beltrami operator and should not be confused with the Fisher--Rao metric
+\cite{Rosenberg1997}.
+
+The alignment field then admits the representation
+\begin{equation}
+\phi(\theta)
+=
+\gamma
+\int_{\ThetaMan}
+\mathrm{d}^D\theta'\,
+\sqrt{\det G(\theta')}
+\,\mathcal{G}(\theta,\theta')\,A(\theta';q).
+\end{equation}
+
+This expression makes explicit that the alignment field is a
+Fisher--geometrically weighted average of the empirical source.
+The smoothing kernel is entirely determined by the intrinsic geometry of the
+statistical manifold \cite{Rosenberg1997,Amari2016}.

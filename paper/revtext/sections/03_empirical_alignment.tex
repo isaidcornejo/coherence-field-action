@@ -1,0 +1,45 @@
+A coordinate-invariant measure of empirical geometric deformation is obtained by
+forming the mixed-index alignment operator
+\begin{equation}
+\Align^{i}{}_{j}(\theta;q)
+=
+(\Metric^{-1})^{ik}(\theta)\,\Cov_{kj}(\theta;q),
+\end{equation}
+which compares empirical and model sensitivities in Fisher-normalized units.
+By construction, $\Align^{i}{}_{j}$ transforms as a $(1,1)$ tensor under smooth
+reparametrizations of $\ThetaMan$, and its spectrum provides a direction-wise
+comparison between empirical and intrinsic Fisher geometry \cite{AmariNagaoka2000,Amari2016}.
+
+From this operator one constructs the scalar diagnostic
+\begin{equation}
+A(\theta;q)
+=
+\Tr(\Align(\theta;q)) - D,
+\end{equation}
+where $D=\dim(\ThetaMan)$. This quantity vanishes at Fisher equilibrium and aggregates
+reinforced and suppressed sensitivity directions into a single reparametrization-invariant
+scalar observable. Importantly, $A(\theta;q)$ depends only on the trace of the alignment
+operator and is therefore insensitive to the detailed directional structure of empirical
+anisotropy \cite{CornejoAlignment2025}.
+
+The diagnostic $A(\theta;q)$ isolates the isotropic component of empirical geometric
+deformation, analogous to a geometric pressure acting uniformly on the statistical
+manifold. In contrast, the traceless part of $\Align^{i}{}_{j}$ encodes anisotropic distortions
+that may be interpreted as shear- or stress-like deformations of Fisher geometry, in direct analogy
+with the scalar--tensor decomposition of geometric response fields \cite{Amari2016,Rosenberg1997}.
+While these tensorial components carry additional directional information, they are not captured by
+a single scalar invariant and would require a higher-rank geometric description.
+
+The present work therefore focuses exclusively on the scalar (spin-0, pressure-like) sector
+of empirical deformation. This choice yields the minimal and most robust invariant diagnostic
+compatible with reparametrization invariance and locality, and provides a natural entry point
+for a variational formulation without introducing additional geometric structure.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/fig_alignment_operator_spectrum.pdf}
+\caption{Schematic spectrum of the alignment operator $\Align^{i}{}_{j}$. The trace captures
+the isotropic (pressure-like) component of empirical deformation, while traceless anisotropic
+modes correspond to shear-like distortions not addressed in the present scalar theory.}
+\label{fig:alignment_spectrum}
+\end{figure}

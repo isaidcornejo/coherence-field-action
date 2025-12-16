@@ -1,0 +1,66 @@
+\subsection{Minimal variational requirements}
+
+We seek a variational formulation for the alignment field $\phi(\theta)$ satisfying the following conditions:
+\begin{itemize}
+\item invariance under smooth reparametrizations of $\ThetaMan$,
+\item locality on the statistical manifold,
+\item minimal derivative order,
+\item absence of any geometric structure beyond the Fisher--Rao metric.
+\end{itemize}
+
+The Fisher--Rao metric uniquely determines the invariant volume element
+$\sqrt{\det G}\,\mathrm{d}^D\theta$ and the Laplace--Beltrami operator
+\begin{equation}
+\Delta_G
+=
+\frac{1}{\sqrt{\det G}}\,
+\partial_i\!\left(
+\sqrt{\det G}\,G^{ij}\partial_j
+\right).
+\end{equation}
+
+No additional geometric tensors, background structures, or intrinsic scales are introduced.
+
+We emphasize that no explicit curvature couplings (such as $\phi\,R(G)$) are included.
+While such terms are compatible with reparametrization invariance, they introduce
+additional geometric structure beyond that strictly required to encode empirical
+alignment.
+The present construction is intentionally restricted to the minimal scalar sector
+generated solely by the Fisher--Rao metric and its associated Laplace--Beltrami operator.
+
+\subsection{Empirically coupled action}
+
+The minimal action coupling the alignment field to empirical data is
+\begin{equation}
+\boxed{
+S[\phi;q]
+=
+\int_{\ThetaMan} \mathrm{d}^D\theta\,\sqrt{\det G}
+\left[
+\frac{1}{2}\,G^{ij}\partial_i\phi\,\partial_j\phi
++
+\gamma\,A(\theta;q)\,\phi
+\right].
+}
+\label{eq:ActionPoisson}
+\end{equation}
+
+This action is uniquely fixed by the requirements of locality on $\ThetaMan$,
+reparametrization invariance, minimal derivative order, and the absence of
+additional geometric structure beyond the Fisher--Rao metric. In particular,
+the linear coupling $A(\theta;q)\,\phi$ is the only admissible lowest-order
+interaction between the empirical source and the scalar field. Higher-order
+or nonlinear couplings would introduce non-minimal empirical scales without
+improving interpretability or geometric consistency.
+
+The coupling constant $\gamma$ fixes only the overall normalization of the
+auxiliary field $\phi$ and introduces no intrinsic scale.
+Since $\phi$ is not an observable quantity, $\gamma$ carries no independent
+geometric or statistical content and may be absorbed into a rescaling of $\phi$.
+Its explicit presence is retained solely for notational clarity when comparing
+different empirical sources.
+
+This action defines a purely geometric relaxation theory on the statistical
+manifold. The alignment field $\phi$ is an auxiliary variable whose equilibrium
+configuration encodes a smooth, Fisher--geometrically consistent response to
+empirical deformation.

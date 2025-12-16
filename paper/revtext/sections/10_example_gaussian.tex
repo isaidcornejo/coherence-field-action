@@ -1,0 +1,88 @@
+We now make the construction explicit for the univariate normal family
+\[
+p(x\mid\mu,\sigma)=\mathcal{N}(\mu,\sigma^2),
+\]
+whose Fisher--Rao geometry is isometric to the Poincaré half-plane and therefore possesses constant negative scalar curvature \cite{CalvoOller1991,CostaSantosStrapasson2015,Amari2016}.
+
+\subsection{Fisher--Rao metric and volume element}
+
+In coordinates $\theta=(\mu,\sigma)$, the Fisher--Rao metric takes the form
+\begin{equation}
+G_{ij}(\mu,\sigma)
+=
+\begin{pmatrix}
+\sigma^{-2} & 0 \\
+0 & 2\,\sigma^{-2}
+\end{pmatrix},
+\end{equation}
+with inverse
+\begin{equation}
+G^{ij}(\mu,\sigma)
+=
+\begin{pmatrix}
+\sigma^{2} & 0 \\
+0 & \tfrac{1}{2}\sigma^{2}
+\end{pmatrix}.
+\end{equation}
+
+The corresponding invariant volume element is
+\begin{equation}
+\sqrt{\det G}\,\dd\mu\,\dd\sigma
+=
+\sqrt{2}\,\sigma^{-2}\,\dd\mu\,\dd\sigma.
+\end{equation}
+
+\subsection{Laplace--Beltrami operator}
+
+The Laplace--Beltrami operator associated with this metric reads
+\begin{equation}
+\Delta_G
+=
+\sigma^{2}\partial_{\mu}^{2}
++
+\frac{\sigma^{2}}{2}\partial_{\sigma}^{2}
+-
+\sigma\,\partial_{\sigma},
+\end{equation}
+as obtained from the canonical Laplace--Beltrami construction on a Riemannian manifold \cite{Rosenberg1997}.
+
+\subsection{Poisson equation for empirical alignment}
+
+In this setting, the alignment field satisfies the Poisson equation
+\begin{equation}
+\left(
+-\sigma^{2}\partial_{\mu}^{2}
+-
+\frac{\sigma^{2}}{2}\partial_{\sigma}^{2}
++
+\sigma\,\partial_{\sigma}
+\right)
+\phi(\mu,\sigma)
+=
+-\gamma\,A(\mu,\sigma;q).
+\end{equation}
+
+For concreteness, consider a contaminated data distribution of the form
+\begin{equation}
+q(x)
+=
+(1-\epsilon)\,\mathcal{N}(\mu_0,\sigma_0^2)
++
+\epsilon\,r(x),
+\end{equation}
+where $r(x)$ represents outliers or structured noise. The resulting empirical score covariance induces a smooth but nontrivial source term $A(\mu,\sigma;q)$ defined over the Poincaré half-plane.
+
+The solution $\phi(\mu,\sigma)$ corresponds to the Fisher--geometrically relaxed response to this empirical deformation. Unlike screened constructions, the propagation of alignment is governed entirely by the intrinsic geometry of the statistical manifold and by the imposed boundary or normalization conditions \cite{Rosenberg1997,Amari2016}. Regions that are nearby in Fisher--Rao distance contribute most strongly to the geometric averaging of the empirical source.
+
+This example illustrates how the abstract variational framework reduces, in a concrete and analytically tractable case, to a well-posed Poisson problem on a canonical statistical manifold.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{figures/fig_univariate_gaussian_alignment_field.pdf}
+\caption{
+Alignment field $\phi(\mu,\sigma)$ on the univariate Gaussian Fisher manifold.
+The field illustrates the Fisher--geometrically relaxed response
+to empirical deformation induced by a contaminated data distribution.
+}
+\label{fig:gaussian_alignment_field}
+\end{figure}
